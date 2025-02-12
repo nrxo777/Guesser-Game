@@ -1,6 +1,7 @@
 let input_number = document.querySelector('#input-number');
 const submit_number = document.querySelector('#submit-number');
 const attempt = document.querySelector('#attempt');
+let hint = document.querySelector('#hint');
 
 let random_number = parseInt((Math.random() * 10) + 1);
 
@@ -38,7 +39,11 @@ function value_check(guess) {
         confirm("YOU WON!!!");
         reset_game();
         return;
-    } 
+    } else if (guess < random_number) {
+        hint.innerHTML = `Try some higher value than ${guess}`
+    } else if (guess > random_number) {
+        hint.innerHTML = `Try some lower value than ${guess}`
+    }
 
     clear_value(guess);
 }
@@ -64,6 +69,7 @@ function reset_game(guess) {
     random_number = parseInt((Math.random() * 10) + 1);
     attempt.innerHTML = '3';
     input_number.value = '';
+    hint.innerHTML = '';
 }
 
 

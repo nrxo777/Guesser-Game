@@ -3,11 +3,11 @@ body {
     text-align: center;
     margin: 15px;
     padding: 15px;
-    background-color: #313131;
+    background-color: #432E54;
 }
 
 .container {
-    color: aliceblue;
+    color: #E8BCB9;
     border: 1px;
     border-style: solid;
     border-radius: 7px;
@@ -19,11 +19,18 @@ h3 {
 }
 
 #input-number, #submit-number {
-    background-color: #313131;
-    color: aliceblue;
+    background-color: #4B4376;
+    color: #E8BCB9;
 }
 
 #submit-number:hover {
-    background-color: aliceblue;
+    background-color: #E8BCB9;
     color: #313131;
+}
+
+#hint {
+    color: #AE445A;
+    background-color: #E8BCB9;
+    border: 10px;
+    padding: 4px;
 }
